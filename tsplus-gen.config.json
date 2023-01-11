@@ -1,0 +1,73 @@
+{
+  "project": {
+    "packageName": "@fp-ts/data",
+    "rootDir": "src",
+    "tsconfig": "tsconfig.build.json",
+    "exclude": ["**/internal/**"],
+    "moduleConfig": {
+      "@fp-ts/data": {
+        "staticPrefixes": ["make", "from", "unsafeFrom"],
+        "fluentNamespaces": ["fp-ts/data"]
+      },
+      "@fp-ts/data/ReadonlyArray": {
+        "ignore": true
+      }
+    }
+  },
+  "mergeWith": ["./tsplus/ReadonlyArray.json"],
+  "namespaces": [
+    {
+      "name": "fp-ts/data",
+      "type": {
+        "include": true,
+        "includeCompanion": true,
+        "companionSuffix": ".Ops"
+      },
+      "static": {
+        "include": true,
+        "staticSuffix": ".Ops"
+      },
+      "fluent": {
+        "include": true,
+        "includeStatic": true,
+        "staticSuffix": ".Aspects"
+      },
+      "pipeable": {
+        "include": true,
+        "includeStatic": true,
+        "staticSuffix": ".Aspects"
+      },
+      "getter": {
+        "include": true,
+        "includeStatic": true,
+        "staticSuffix": ".Aspects"
+      }
+    }
+  ],
+  "additionalExtensions": [
+    ["fp-ts/data/Chunk#append", "pipeable-operator", "<<"],
+    ["fp-ts/data/Chunk#concat", "pipeable-operator", "+"],
+    ["fp-ts/data/Chunk#prepend", "pipeable-operator", ">>"],
+
+    ["fp-ts/data/Duration#add", "pipeable-operator", "+"],
+    ["fp-ts/data/Duration#greaterThan", "pipeable-operator", ">"],
+    ["fp-ts/data/Duration#greaterThanOrEqualTo", "pipeable-operator", ">="],
+    ["fp-ts/data/Duration#lessThan", "pipeable-operator", "<"],
+    ["fp-ts/data/Duration#lessThanOrEqualTo", "pipeable-operator", "<="],
+    ["fp-ts/data/Duration#subtract", "pipeable-operator", "-"],
+    ["fp-ts/data/Duration#times", "pipeable-operator", "*"],
+
+    ["fp-ts/data/Equal#equals", "operator", "=="],
+    ["fp-ts/data/Equal#equals", "operator", "==", "ReadonlyArray"],
+    ["fp-ts/data/Equal#equals", "operator", "==", "fp-ts/data/Duration"],
+    ["fp-ts/data/Equal#equals", "operator", "==", "fp-ts/data/Either"],
+    ["fp-ts/data/Equal#equals", "operator", "==", "fp-ts/data/Option"],
+
+    ["fp-ts/data/List#concat", "pipeable-operator", "+"],
+    ["fp-ts/data/List#prepend", "pipeable-operator", ">>"],
+
+    ["fp-ts/data/Queue#enqueue", "pipeable-operator", "<<"],
+    ["fp-ts/data/Queue#enqueueAll", "pipeable-operator", "+"],
+    ["fp-ts/data/Queue#prepend", "pipeable-operator", ">>"]
+  ]
+}

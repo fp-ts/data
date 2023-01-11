@@ -1,0 +1,15 @@
+{
+  "@fp-ts/data/ReadonlyArray": [
+    {
+      "definitionName": "make",
+      "definitionKind": "const",
+      "extensions": [
+        {
+          "kind": "static",
+          "typeName": "fp-ts/data/ReadonlyArray.Ops",
+          "name": "make"
+        }
+      ]
+    }
+  ]
+}
