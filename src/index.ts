@@ -20,6 +20,7 @@ import * as hashMap from "@fp-ts/data/HashMap"
 import * as hashSet from "@fp-ts/data/HashSet"
 import * as identity from "@fp-ts/data/Identity"
 import * as json from "@fp-ts/data/Json"
+import * as metric from "@fp-ts/data/Metric"
 import * as mutableHashMap from "@fp-ts/data/MutableHashMap"
 import * as mutableHashSet from "@fp-ts/data/MutableHashSet"
 import * as mutableList from "@fp-ts/data/MutableList"
@@ -134,6 +135,10 @@ export {
    * @since 1.0.0
    */
   json,
+  /**
+   * @since 1.0.0
+   */
+  metric,
   /**
    * @since 1.0.0
    */
